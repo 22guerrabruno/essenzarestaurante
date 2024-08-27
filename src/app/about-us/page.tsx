@@ -83,7 +83,7 @@ const AboutUsPage = () => {
         </div>
         <div className='w-full flex items-center justify-center mt:20 lg:mt-0'>
           <img
-            src='https://res.cloudinary.com/duihhp37l/image/upload/v1724739356/essenza/imagenes%20Essenza/thai/ed_copia_njbk4t.jpg.jpg'
+            src='https://res.cloudinary.com/duihhp37l/image/upload/v1724739356/essenza/imagenes%20Essenza/thai/ed_copia_njbk4t.jpg'
             alt='quienes somos'
             className='w-[350px] lg:w-full min-w-[350px] aspect-auto object-cover '
           />
