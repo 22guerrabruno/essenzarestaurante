@@ -9,7 +9,7 @@ const HealthyFood = () => {
     <div className='flex items-center justify-center w-full h-fit gap-14 flex-col sm:flex-row'>
       <div className=''>
         <img
-          src='/89476BDA-EE35-4983-B0A7-1EF006C0FCFF.JPG'
+          src='https://res.cloudinary.com/duihhp37l/image/upload/v1724674909/essenza/imagenes%20Essenza/ensalada-de-bacalao-curado_fmvsog.jpg'
           alt='cocktail'
           className='rounded-full h-52 w-52 object-square'
         />

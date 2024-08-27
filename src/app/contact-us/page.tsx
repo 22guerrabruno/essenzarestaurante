@@ -34,7 +34,7 @@ const ContactUs = () => {
   };
   return (
     <div className='w-full flex flex-col items-center justify-center gap-2 mt-10'>
-      <h1 className='text-5xl font-bold font-vibes'>
+      <h1 className='text-5xl font-bold font-oswald'>
         {isEnglish ? 'Contact Us' : 'Contacto'}
       </h1>
       <p className='text-sm text-center font-raleway-400 max-w-[80%]'>
@@ -56,7 +56,7 @@ const ContactUs = () => {
                 type='text'
                 placeholder={isEnglish ? 'John Doe' : 'Juan Perez'}
                 name='name'
-                className='w-96 h-10 border-2 border-sky-300 rounded-md px-2 focus:outline-sky-600'
+                className='w-96 h-10 border-2 border-gray-300 rounded-md px-2 focus:outline-gray-600'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -71,7 +71,7 @@ const ContactUs = () => {
                 type='email'
                 name='email'
                 placeholder='example@email.com'
-                className='w-96 h-10 border-2 border-sky-300 rounded-md px-2 focus:outline-sky-600'
+                className='w-96 h-10 border-2 border-gray-300 rounded-md px-2 focus:outline-gray-600'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -90,16 +90,16 @@ const ContactUs = () => {
                 }
                 rows={5}
                 name='message'
-                className='w-96 h-40 border-2 border-sky-300 rounded-md px-2 focus:outline-sky-600 resize-none'
+                className='w-96 h-40 border-2 border-gray-300 rounded-md px-2 focus:outline-gray-600 resize-none'
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
             <button
               type='submit'
-              className='w-96 h-10 hover:bg-sky-300 bg-transparent hover:text-white rounded-md border-2 border-sky-300 text-black'>
+              className='w-96 h-10 hover:bg-gray-300 bg-transparent hover:text-white rounded-md border-2 border-gray-300 text-black'>
               {loading ? (
-                <Loader2 className='animate-spin text-sky-300 items-center justify-center w-full' />
+                <Loader2 className='animate-spin text-gray-300 items-center justify-center w-full' />
               ) : isEnglish ? (
                 'Send'
               ) : (
@@ -114,14 +114,16 @@ const ContactUs = () => {
           </h2>
           <p className='font-raleway-400 text-sm'>
             Calle Gran Bretaña, Calpe (Alicante) <br />
-            Teléfono: 96 506 43 66
+            Teléfono: 96 694 06 57
           </p>
           <p className='font-raleway-400 text-sm '>
-            En un entorno paradisíaco, frente al Mar Mediterráneo, descubrirás
-            la mejor gastronomía en Iguana Beach Bar Calpe
+            {!isEnglish
+              ? `Ofrecemos una cocina de autor donde el producto de la tierra y las recetas tradicionales se fusionan 
+     con tendencias actuales y con una elegante presentación.`
+              : 'We offer a signature cuisine where local products and traditional recipes merge with current trends and an elegant presentation.'}
           </p>
           <a
-            href='https://www.facebook.com/Iguana-517245781753623/'
+            href='https://www.facebook.com/Essenza-Restaurante-Pizza-Pasta-224160381498020/'
             target='_blank'
             rel='noopener noreferrer'
             className='flex items-center justify-center gap-2 font-raleway-400 text-sm'>
@@ -134,7 +136,7 @@ const ContactUs = () => {
               : 'Conecta con nosotros en Facebook'}
           </a>
           <a
-            href='https://www.facebook.com/Iguana-517245781753623/'
+            href='https://www.tripadvisor.es/Restaurant_Review-g187526-d14131088-Reviews-Essenza_Restaurante_Pizza-Calpe_Costa_Blanca_Province_of_Alicante_Valencian_Comm.html'
             target='_blank'
             rel='noopener noreferrer'
             className='flex items-center justify-center gap-2 font-raleway-400 text-sm'>
@@ -146,17 +148,41 @@ const ContactUs = () => {
               ? 'Rate us on TripAdvisor'
               : 'TripAdvisor, danos tu opinión'}
           </a>
+          <a
+            href='https://www.instagram.com/essenzacalpe?igsh=MWlmZjRqeGVyMWM5bQ=='
+            original-title
+            target='_blank'
+            className='flex items-center justify-center gap-2 font-raleway-400 text-sm'>
+            <img
+              src='/instagram.jpeg'
+              alt='eltenedor'
+              className='rounded-lg w-6 h-6 cursor-pointer'
+            />
+            {isEnglish ? 'Comment on instagram' : 'Comenta en instagram'}
+          </a>
         </div>
       </div>
       <hr className='h-1 border-1 w-full border-gray-200 mt-10 mb-10' />
       <iframe
-        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24928.581174249528!2d0.02921166589108919!3d38.64720989379345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129dfe178a5563c1%3A0xfd99c1370cc1bcc1!2sIguana%20Restaurant%20%26%20Cocktails!5e0!3m2!1ses!2ses!4v1724348310799!5m2!1ses!2ses'
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19401.703801432217!2d0.06848990686037705!3d38.64476487982951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129dff1b32e06883%3A0x8cd8ba494633d10e!2sESSENZA%20RESTAURANT.!5e0!3m2!1ses!2ses!4v1724673803179!5m2!1ses!2ses'
         style={{ border: 0 }}
         loading='lazy'
         className='w-[350px] h-[500px] sm:w-[500px] sm:h-[450px] md:w-[600px] md:h-[450px] lg:w-[750px] mb-10'></iframe>
       <div className='w-full flex flex-col justify-center items-center gap-4 mb-4'>
         <hr className='h-1 border-1 w-full border-gray-200' />
         <Logo />
+      </div>
+      <div className='font-raleway-400 text-xs w-full bg-gray-900 p-2 text-center text-white flex items-center justify-between flex-wrap'>
+        <p className='whitespace-nowrap w-full'>
+          {' '}
+          © 2018 Essenza Restaurant. All Rights Reserved.
+        </p>
+        <a
+          href='https://www.brunoguerracode.dev/'
+          target='_blank'
+          className='whitespace-nowrap w-full'>
+          Created by Bruno Guerra
+        </a>
       </div>
     </div>
   );

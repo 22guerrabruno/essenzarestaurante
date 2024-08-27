@@ -1,3 +1,4 @@
+import { oswald } from '@/utils/fonts';
 import type { Config } from 'tailwindcss';
 
 const config = {
@@ -75,6 +76,7 @@ const config = {
       fontFamily: {
         vibes: 'var(--font-vibes)',
         raleway: 'var(--font-raleway)',
+        oswald: 'var(--font-oswald)',
       },
     },
   },

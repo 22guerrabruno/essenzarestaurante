@@ -109,8 +109,8 @@ const Navbar = () => {
         <span className='sr-only'>Toggle navigation menu</span>
       </Button>
       {isDropdownOpen && (
-        <ul className=' lg:hidden absolute bg-sky-300 shadow-md rounded-md mt-2 py-1 w-48 dropdown-container top-16 right-3 z-50'>
-          <li className='px-4 py-2 hover:bg-gray-100 text-white hover:text-gray-700'>
+        <ul className=' lg:hidden absolute bg-gray-300 shadow-md rounded-md mt-2 py-1 w-48 dropdown-container top-20 right-3 z-50'>
+          <li className='px-4 py-2 hover:bg-gray-100 text-gray-600 hover:text-gray-700'>
             <Link
               href='/about-us'
               onClick={(e) => {
@@ -121,7 +121,7 @@ const Navbar = () => {
               {isEnglish ? 'About Us' : 'Quienes Somos'}
             </Link>
           </li>
-          <li className='px-4 py-2 hover:bg-gray-100 text-white hover:text-gray-700'>
+          <li className='px-4 py-2 hover:bg-gray-100 text-gray-600 hover:text-gray-700'>
             <Link
               href='/our-menu'
               onClick={(e) => {
@@ -132,7 +132,7 @@ const Navbar = () => {
               {isEnglish ? 'Our Menu' : 'Nuestra Carta'}
             </Link>
           </li>
-          <li className='px-4 py-2 hover:bg-gray-100 text-white hover:text-gray-700'>
+          <li className='px-4 py-2 hover:bg-gray-100 text-gray-600 hover:text-gray-700'>
             <Link
               href='/image-gallery'
               onClick={(e) => {
@@ -143,7 +143,7 @@ const Navbar = () => {
               {isEnglish ? 'Gallery' : 'Galeria'}
             </Link>
           </li>
-          <li className='px-4 py-2 hover:bg-gray-100 text-white hover:text-gray-700'>
+          <li className='px-4 py-2 hover:bg-gray-100 text-gray-600 hover:text-gray-700'>
             <Link
               href='/contact-us'
               onClick={(e) => {

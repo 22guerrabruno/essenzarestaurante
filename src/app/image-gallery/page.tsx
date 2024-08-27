@@ -9,36 +9,43 @@ const ImageGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
   const pictures = [
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417645/postres_lg7pxf.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417645/queso_jdajte.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417645/sandwich_ncbkdw.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417645/pulpo2_e2pdww.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417644/mollejas2_vzeznr.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417638/calamares_huastd.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417641/Mejillones_r0lnnd.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417646/tataki_pq5qg5.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417639/costillas_cimde4.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417640/gambones_dux81l.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417645/sashimi_nifmrt.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417640/IMG_1300_enzuny.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417641/mollejas_ob2ax2.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417641/merluza_seccgg.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417640/cordero_ogy1od.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417639/confit_tog8tb.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417637/89476BDA-EE35-4983-B0A7-1EF006C0FCFF_womvjp.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1710159369/samples/food/dessert.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417640/croquetas_lmn9nu.png',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724417646/wantoon_vbvaau.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724430604/Captura_de_pantalla_2024-08-23_a_las_18.29.55_opr0xf.png',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724429390/291FFC38-A611-4031-812F-665638B55348_1_105_c_rsgnxu.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724429616/21EF0062-F1C1-49FD-88EC-3FD410063051_1_201_a_smkxp7.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724429477/5E3F3758-1750-4075-9A06-98A3A8AA95BC_1_105_c_bbus0k.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724430542/Captura_de_pantalla_2024-08-23_a_las_18.28.52_zcqc38.png',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724429882/EDCC4267-F046-4B3B-9F62-65D33A65EA53_1_105_c_nehs1c.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724429866/C04C7B59-5FE2-4958-BDD2-315B72167C09_4_5005_c_cle6cp.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724429865/B62904F9-AFDE-49FF-93D1-1BD21415D27C_1_105_c_gjm7v3.jpg',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724430672/Captura_de_pantalla_2024-08-23_a_las_18.31.02_btym4q.png',
-    'https://res.cloudinary.com/duihhp37l/image/upload/v1724429865/4C2232DF-0719-42EB-A2A8-059516F5A468_1_105_c_nq8sfh.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739358/essenza/imagenes%20Essenza/thai/foto_salon_copia_vmttdf.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739355/essenza/imagenes%20Essenza/thai/entrecote_copia_qhcxuk.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739354/essenza/imagenes%20Essenza/thai/foto_guitarrista_1_copia_yc5ump.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739353/essenza/imagenes%20Essenza/thai/barry_papardelle_copia_t8sokf.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739352/essenza/imagenes%20Essenza/thai/spaguetti2_copia_m20woy.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739351/essenza/imagenes%20Essenza/thai/camilo_vino_perfil_copia_ot5wng.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739350/essenza/imagenes%20Essenza/thai/jose_copia_ytivym.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/t_calamares/v1724739349/essenza/imagenes%20Essenza/thai/calamares_copia_j0b6mj.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739348/essenza/imagenes%20Essenza/thai/foto_cartel_con_gon_copia_s5dmfl.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739347/essenza/imagenes%20Essenza/thai/and_copia_e6t6lj.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739345/essenza/imagenes%20Essenza/thai/essenza_fongo_copia_fderur.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739344/essenza/imagenes%20Essenza/thai/pizza_peperonnni_copia_mmhfmt.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739343/essenza/imagenes%20Essenza/thai/lemon_pie_copia_gxi7b7.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739342/essenza/imagenes%20Essenza/thai/ravioli_copia_xcbbrb.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/t_burrata/v1724739341/essenza/imagenes%20Essenza/thai/burrata_copia_sulx0f.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739340/essenza/imagenes%20Essenza/thai/cartel_chouffe_2_copia_fh9eql.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739340/essenza/imagenes%20Essenza/thai/pulpo_copia_ucsjtl.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/t_ensaladilla/v1724739338/essenza/imagenes%20Essenza/thai/ensaladilla_rusa_copia_w8kmoe.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739336/essenza/imagenes%20Essenza/thai/camilo_frente_barra_copia_at5wxj.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724739336/essenza/imagenes%20Essenza/thai/provoletta_copia_ge7kx3.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/t_ensalada/v1724739335/essenza/imagenes%20Essenza/thai/ensalada_quinoa_copia_f7bzer.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724692507/essenza/imagenes%20Essenza/ensalada-de-gambon-y_t16oyi.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724692507/essenza/imagenes%20Essenza/ensalada-de-remolacha_n315zs.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724692437/essenza/imagenes%20Essenza/calzone_euzxec.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674913/essenza/imagenes%20Essenza/img-20190806-151854-largejpg_csmkn4.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674913/essenza/imagenes%20Essenza/caption_lyarcy.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674912/essenza/imagenes%20Essenza/codillo-de-cerdo-confitado_qq3uvc.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674912/essenza/imagenes%20Essenza/lubina-salvaje-con-micro_hxfxoy.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674912/essenza/imagenes%20Essenza/fachada-del-restaurante_jfabxt.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674912/essenza/imagenes%20Essenza/caption_1_bkgdm6.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674911/essenza/imagenes%20Essenza/photo0jpg_1_ra1uxy.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674911/essenza/imagenes%20Essenza/img-20190805-150037-largejpg_ezr9cu.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674911/essenza/imagenes%20Essenza/caption_6_bygp8f.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674910/essenza/imagenes%20Essenza/essenza-restaurante-pizza_jfvqr8.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674909/essenza/imagenes%20Essenza/caption_3_uittl4.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674908/essenza/imagenes%20Essenza/20190830-222507-largejpg_e6ufzw.jpg',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674908/essenza/imagenes%20Essenza/20190121-152259-largejpg_yhwda0.jpg',
   ];
 
   const handleImageClick = (src: string) => {
@@ -56,53 +63,77 @@ const ImageGallery = () => {
   };
 
   return (
-    <div className='w-full flex flex-col items-center justify-center gap-2 p-4'>
-      {selectedImage && (
-        <div
-          className='fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40'
-          onClick={handleCloseClick}>
-          <div className='w-full flex items-center justify-center h-full'>
-            <img
-              src={selectedImage}
-              alt=''
-              className={clsx('w-[80%] max-h-[80%]  rounded-lg cursor-pointer')}
-            />
-          </div>
-        </div>
-      )}
-      <h1 className='text-5xl font-bold font-vibes mt-4 mb-4'>
-        {isEnglish ? 'Image Gallery' : 'Galeria de Imagenes'}
-      </h1>
-      <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-2'>
-        {pictures.map((src) => (
+    <>
+      <div className='w-full flex flex-col items-center justify-center gap-2 p-4'>
+        {selectedImage && (
           <div
-            key={src}
-            className={clsx(
-              `flex items-center justify-center h-[250px] border-4 border-black border-collapse rounded-lg `,
-              hoveredImage === src && 'animate-pulse'
-            )}
-            onMouseEnter={() => handleHoverIn(src)}
-            onMouseLeave={handleHoverOut}>
-            <img
-              src={src}
-              alt=''
-              className={clsx(
-                'w-full h-full object-cover cursor-pointer',
-                hoveredImage === src && 'zoom-out-150'
-              )}
-              onClick={() => handleImageClick(src)}
-            />
-            {selectedImage === src && (
-              <button
-                onClick={handleCloseClick}
-                className='absolute top-2 right-2 bg-white text-black p-2 rounded-full'>
-                X
-              </button>
-            )}
+            className='fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40'
+            onClick={handleCloseClick}>
+            <div className='w-full flex items-center justify-center h-full'>
+              <img
+                src={selectedImage}
+                alt=''
+                className={clsx(
+                  'w-[80%] max-h-[80%]  rounded-lg cursor-pointer'
+                )}
+              />
+            </div>
           </div>
-        ))}
+        )}
+        <img
+          src='/menu-circle.png'
+          alt='Galeria'
+        />
+        <h2 className='text-[80px] font-oswald font-medium text-center'>
+          {isEnglish ? ' IMAGE GALLERY' : 'GALERIA DE IMAGENES'}
+        </h2>
+        <p className='p-2 border-t-2 border-b-2 border-x-gray-500 text-center'>
+          {isEnglish ? 'A BIT OF OUR ESSENCE.' : 'UN POCO DE NUESTRA ESENCIA.'}
+        </p>
+
+        <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-2'>
+          {pictures.map((src) => (
+            <div
+              key={src}
+              className={clsx(
+                `flex items-center justify-center h-[250px] border-4 border-black border-collapse rounded-lg `,
+                hoveredImage === src && 'animate-pulse'
+              )}
+              onMouseEnter={() => handleHoverIn(src)}
+              onMouseLeave={handleHoverOut}>
+              <img
+                src={src}
+                alt=''
+                className={clsx(
+                  'w-full h-full object-cover cursor-pointer',
+                  hoveredImage === src && 'zoom-out-150'
+                )}
+                onClick={() => handleImageClick(src)}
+              />
+              {selectedImage === src && (
+                <button
+                  onClick={handleCloseClick}
+                  className='absolute top-2 right-2 bg-white text-black p-2 rounded-full'>
+                  X
+                </button>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <div className='font-raleway-400 text-xs w-full bg-gray-900 p-2 text-center text-white flex items-center justify-between flex-wrap'>
+        <p className='whitespace-nowrap w-full'>
+          {' '}
+          © 2018 Essenza Restaurant. All Rights Reserved.
+        </p>
+        <a
+          href='https://www.brunoguerracode.dev/'
+          target='_blank'
+          className='whitespace-nowrap w-full'>
+          Created by Bruno Guerra
+        </a>
+      </div>
+    </>
   );
 };
 

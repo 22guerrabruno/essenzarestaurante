@@ -4,11 +4,11 @@ import React from 'react';
 const Logo = () => {
   return (
     <Image
-      src='/LogoIguana.png'
+      src='/logo-esenza.png'
       alt='Logo'
-      width={300}
+      width={200}
       className='object-cover image-highlight'
-      height={300}
+      height={200}
     />
   );
 };

@@ -18,6 +18,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import Location from '@/components/Location';
 import Logo from '@/components/Logo';
+import { FaFacebookSquare, FaTripadvisor } from 'react-icons/fa';
 
 export default function Home() {
   const { ref, inView } = useInView({
@@ -34,11 +35,12 @@ export default function Home() {
     visible: { opacity: 1, scale: 1 },
   };
   const comment = [
-    '/comment1.png',
-    '/comment2.png',
-    '/comment3.png',
-    '/comment4.png',
-    '/comment5.png',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674912/essenza/imagenes%20Essenza/Captura_de_pantalla_2024-08-26_a_las_14.13.17_qdgwxe.png',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674912/essenza/imagenes%20Essenza/Captura_de_pantalla_2024-08-26_a_las_14.12.54_ycr5kz.png',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674912/essenza/imagenes%20Essenza/Captura_de_pantalla_2024-08-26_a_las_14.11.12_njlbyn.png',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674911/essenza/imagenes%20Essenza/Captura_de_pantalla_2024-08-26_a_las_14.12.32_ezd11o.png',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674910/essenza/imagenes%20Essenza/Captura_de_pantalla_2024-08-26_a_las_14.11.55_m2dqp2.png',
+    'https://res.cloudinary.com/duihhp37l/image/upload/v1724674908/essenza/imagenes%20Essenza/Captura_de_pantalla_2024-08-26_a_las_14.11.33_kwaf59.png',
   ];
   const { isEnglish } = useLanguage();
 
@@ -47,39 +49,12 @@ export default function Home() {
       <div className='w-full'>
         <Hero />
       </div>
-      <div
-        className='w-full flex flex-col lg:flex-row items-center justify-between mt-20 h-fit gap-8 p-4'
-        id='carta'>
-        <motion.div
-          initial='hidden'
-          animate='visible'
-          variants={variants2}
-          transition={{ duration: 0.2 }}>
-          <Card />
-        </motion.div>
-        <motion.div
-          initial='hidden'
-          animate='visible'
-          variants={variants2}
-          transition={{ duration: 0.7 }}>
-          <Dessert />
-        </motion.div>
-        <motion.div
-          initial='hidden'
-          animate='visible'
-          variants={variants2}
-          transition={{ duration: 1 }}>
-          <Cocktails />
-        </motion.div>
-      </div>
-      <div className='w-full flex flex-col lg:flex-row items-center justify-between mt-20 h-fit gap-8 pb-14'>
-        <ExtraContent />
-      </div>
-      <h2 className='font-raleway-800 text-4xl font-bold'>
+      <h2 className='text-[80px] font-oswald font-medium text-center uppercase'>
         {!isEnglish ? 'Gastronomía & Cocktails' : 'Gastronomy & Cocktails'}
       </h2>
-      <hr className='h-1 border-1 w-full border-gray-200 mt-10' />
-      <div className='w-full flex flex-col lg:flex-row items-center justify-center mt-10 h-fit gap-8 p-4 '>
+      <Card />
+      <hr className='h-1 border-1 w-full border-gray-200 mt-4' />
+      <div className='w-full flex flex-col lg:flex-row items-center justify-center mt-4 h-fit gap-8 p-4 '>
         <div className='flex flex-col items-center justify-center gap-6 w-full p-4'>
           <motion.div
             initial='hidden'
@@ -110,21 +85,20 @@ export default function Home() {
           <CartelTel />
         </div>
       </div>{' '}
-      <hr className='h-1 border-1 w-full border-gray-200 mt-10 mb-10' />
+      <div className='w-full flex flex-col lg:flex-row items-center justify-between mt-20 h-fit gap-8 pb-14'>
+        <ExtraContent />
+      </div>
       <div className='flex items-center justify-center w-full mb-10'>
         <Link
           className='text-sky-300'
           href='/our-menu'>
-          <Button className='border-[2px] border-sky-300 bg-white text-black hover:bg-sky-300 hover:font-bold hover:text-white'>
+          <Button className='border-[2px] border-gray-300 bg-white text-black hover:bg-gray-500 hover:font-bold hover:text-white'>
             {!isEnglish ? 'Conoce toda nuestra carta' : 'Check all our menu'}
           </Button>
         </Link>
       </div>
-      <div className='w-full mb-10'>
-        <Pictures />
-      </div>
-      <div className='w-full mb-20 p-8 h-[500px]'>
-        <h2 className='w-full flex items-center justify-center font-raleway-800 text-4xl font-bold'>
+      <div className='w-full mb-20 p-8 h-[520px]'>
+        <h2 className='w-full flex items-center justify-center font-oswald text-4xl font-bold'>
           {!isEnglish
             ? 'Lo que la gente dice de Nosotros'
             : 'What people say about us'}
@@ -143,9 +117,58 @@ export default function Home() {
       <div className='w-full flex flex-col justify-center items-center gap-4'>
         <hr className='h-1 border-1 w-full border-gray-200' />
         <Logo />
-        <p className='font-raleway-400 text-xs w-full bg-sky-300 p-2 text-center text-white'>
-          © 2021 Iguana Beach Bar & Cocktail`s
-        </p>
+        <div className='flex items-center justify-center gap-3 mt-8 z-10'>
+          <a
+            href='https://www.facebook.com/Essenza-Restaurante-Pizza-Pasta-224160381498020/'
+            original-title
+            target='_blank'>
+            <FaFacebookSquare
+              className='text-blue-500 cursor-pointer'
+              size={24}
+            />
+          </a>
+          <a
+            href='https://www.tripadvisor.es/Restaurant_Review-g187526-d14131088-Reviews-Essenza_Restaurante_Pizza-Calpe_Costa_Blanca_Province_of_Alicante_Valencian_Comm.html'
+            original-title
+            target='_blank'>
+            <FaTripadvisor
+              className='text-green-500 cursor-pointer'
+              size={24}
+            />
+          </a>
+          <a
+            href='https://www.eltenedor.es/restaurante/essenza/396169'
+            original-title
+            target='_blank'>
+            <img
+              src='/fork.png'
+              alt='eltenedor'
+              className='rounded-full w-6 h-6 cursor-pointer'
+            />
+          </a>
+          <a
+            href='https://www.instagram.com/essenzacalpe?igsh=MWlmZjRqeGVyMWM5bQ=='
+            original-title
+            target='_blank'>
+            <img
+              src='/instagram.jpeg'
+              alt='eltenedor'
+              className='rounded-lg w-6 h-6 cursor-pointer'
+            />
+          </a>
+        </div>
+        <div className='font-raleway-400 text-xs w-full bg-gray-900 p-2 text-center text-white flex items-center justify-between flex-wrap'>
+          <p className='whitespace-nowrap w-full'>
+            {' '}
+            © 2018 Essenza Restaurant. All Rights Reserved.
+          </p>
+          <a
+            href='https://www.brunoguerracode.dev/'
+            target='_blank'
+            className='whitespace-nowrap w-full'>
+            Created by Bruno Guerra
+          </a>
+        </div>
       </div>
     </main>
   );

@@ -9,7 +9,7 @@ const BestCocktails = () => {
     <div className='flex items-center justify-center w-full h-fit gap-14 flex-col sm:flex-row'>
       <div className=''>
         <img
-          src='/cocktails-bar.jpeg'
+          src='https://res.cloudinary.com/duihhp37l/image/upload/v1724738520/essenza/imagenes%20Essenza/retro-cocktails-b12b00d_mvmmqt.jpg'
           alt='cocktail'
           className='rounded-full h-52 w-52 object-square'
         />
