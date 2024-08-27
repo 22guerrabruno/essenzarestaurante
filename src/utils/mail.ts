@@ -3,7 +3,7 @@ import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 const transport = nodemailer.createTransport({
   host: process.env.NEXT_EMAIL_HOST,
-  port: process.env.NEXT_EMAIL_PORT,
+  port: Number(process.env.NEXT_EMAIL_PORT),
   auth: {
     user: process.env.NEXT_EMAIL_USER,
     pass: process.env.BREVO_API_KEY,
