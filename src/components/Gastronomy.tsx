@@ -14,9 +14,9 @@ const Gastronomy = () => {
         </h2>
         <p className='text-sm w-[70%]'>
           {!isEnglish
-            ? `En Iguana Beach Bar ofrecemos deliciosos arroces valencianos, ensaladas saludables y divertidas, 
+            ? `En Essenza Restaurante ofrecemos deliciosos arroces valencianos, ensaladas saludables y divertidas, 
             excelentes carnes de primera calidad, pescados de la bahía, gran variedad de entrantes y deliciosos postres y cócteles.`
-            : `At Iguana Beach Bar we offer delicious Valencian rice dishes, healthy and fun salads,
+            : `At Essenza Restaurante we offer delicious Valencian rice dishes, healthy and fun salads,
             excellent top quality meats, bay fish, a wide variety of starters and delicious desserts and cocktails.`}
         </p>
       </div>
