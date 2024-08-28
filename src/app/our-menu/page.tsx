@@ -76,7 +76,7 @@ const OurMenuPage = () => {
             </h2>
             <Link
               href='/our-menu/food'
-              className='flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold'>
+              className='md:flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold hidden'>
               <img
                 src='/comida-ess.png'
                 alt='comida'
@@ -84,6 +84,17 @@ const OurMenuPage = () => {
               />
               {isEnglish ? 'Click to show' : 'Click para ver'}
             </Link>
+            <a
+              href='https://res.cloudinary.com/duihhp37l/image/upload/v1724839180/food-essenza_fwaxzl.pdf'
+              target='_blank'
+              className='flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold md:hidden'>
+              <img
+                src='/comida-ess.png'
+                alt='comida'
+                className=' w-72 h-72 rounded-full object-cover'
+              />
+              {isEnglish ? 'Click to show' : 'Click para ver'}
+            </a>
           </div>
           <div
             className='flex flex-col items-center justify-center flex-grow gap-4 mb-10 md:mb-0'
@@ -93,7 +104,7 @@ const OurMenuPage = () => {
             </h2>
             <Link
               href='/our-menu/drinks'
-              className='flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold'>
+              className='md:flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold hidden'>
               <img
                 src='/cocktails-ess.jpg'
                 alt='drinks'
@@ -101,6 +112,17 @@ const OurMenuPage = () => {
               />
               {isEnglish ? 'Click to show' : 'Click para ver'}
             </Link>
+            <a
+              href='https://res.cloudinary.com/duihhp37l/image/upload/v1724839180/drinks-essenza_vrwvus.pdf'
+              className='flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold md:hidden'
+              target='_blank'>
+              <img
+                src='/cocktails-ess.jpg'
+                alt='drinks'
+                className=' w-72 h-72 rounded-full object-cover'
+              />
+              {isEnglish ? 'Click to show' : 'Click para ver'}
+            </a>
           </div>
         </div>
       </div>
