@@ -85,7 +85,7 @@ const OurMenuPage = () => {
               {isEnglish ? 'Click to show' : 'Click para ver'}
             </Link>
             <a
-              href='https://res.cloudinary.com/duihhp37l/image/upload/v1724839180/food-essenza_fwaxzl.pdf'
+              href='https://res.cloudinary.com/duihhp37l/image/upload/v1751825686/MENU_ESSENZA_2025_Alergenos_ok_v9bugj.pdf'
               target='_blank'
               className='flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold md:hidden'>
               <img
@@ -113,7 +113,7 @@ const OurMenuPage = () => {
               {isEnglish ? 'Click to show' : 'Click para ver'}
             </Link>
             <a
-              href='https://res.cloudinary.com/duihhp37l/image/upload/v1724839180/drinks-essenza_vrwvus.pdf'
+              href='https://res.cloudinary.com/duihhp37l/image/upload/v1751825658/essenza_bebida_nstlig.pdf'
               className='flex items-center justify-center flex-col gap-4 font-raleway-800 font-bold md:hidden'
               target='_blank'>
               <img
